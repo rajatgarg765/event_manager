@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.db import IntegrityError
 from django.utils.timezone import localtime, get_current_timezone
 from rest_framework.views import APIView
@@ -5,7 +6,6 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.utils.dateparse import parse_datetime
 from django.utils.timezone import now, make_aware
-from django.core.paginator import Paginator
 from events.models import Event, Attendee
 
 
@@ -110,7 +110,6 @@ class RegisterAttendeeView(APIView):
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
-from django.core.paginator import Paginator, EmptyPage
 
 class AttendeeListView(APIView):
     def get(self, request, event_id):
