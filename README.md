@@ -51,47 +51,5 @@ A mini yet powerful Event Management REST API built using **Django** and **Djang
 
 ---
 
-## 🗂️ Project Structure
-
-event_mgmt/
-├── events/
-│ ├── models.py
-│ ├── views.py
-│ ├── serializers.py
-│ ├── urls.py
-│ └── tests/
-├── event_mgmt/
-│ ├── settings.py
-│ ├── urls.py
-├── manage.py
-├── requirements.txt
-└── README.md
-
-
-📬 Sample Requests (cURL)
-🔹 Create an Event
-curl -X POST http://127.0.0.1:8000/api/events \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Demo Event",
-    "location": "Bangalore",
-    "start_time": "2025-08-10T10:00:00Z",
-    "end_time": "2025-08-10T12:00:00Z",
-    "max_capacity": 50
-}'
-
-🔹 List Events
-curl http://127.0.0.1:8000/api/events/
-🔹 Register Attendee
-curl -X POST http://127.0.0.1:8000/api/events/1/register \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Alice",
-    "email": "alice@example.com"
-}'
-🔹 List Attendees
-curl http://127.0.0.1:8000/api/events/1/attendees?page=1
-📑 Swagger Documentation
-http://127.0.0.1:8000/swagger/
-
----
+## More Detail in this Doc: 
+https://docs.google.com/document/d/1Fh13BW2jwjmDpGz63-CFknZ9lPraPIV3Zs2AdxNysmY/edit?tab=t.0
